@@ -1,0 +1,141 @@
+:root {
+  font-size: 16px;
+  font-family: sans-serif;
+
+  --clr-primary-dark: rgb(26, 26, 26);
+  --clr-secondary-dark: rgb(240, 240, 240);
+
+  --clr-primary-light: rgb(240, 240, 240);
+  --clr-secondary-light: rgb(26, 26, 26);
+
+  --clr-accent: rgb(248, 61, 61);
+
+  --btn-size: 4.5rem;
+
+  --font-family: Roboto;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(10, 10, 10);
+  color: var(--clr-secondary-dark);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family), sans-serif;
+}
+
+.calculator {
+  width: 22rem;
+  height: 40rem;
+  border-radius: 1.5rem;
+  background: var(--clr-primary-dark);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.display {
+  margin-bottom: auto;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: rgb(22, 22, 22);
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.display .history {
+  color: rgba(240, 240, 240, 0.5);
+  font-size: 1rem;
+  text-align: center;
+  overflow: auto;
+  max-width: 90%;
+  scrollbar-color: var(--clr-accent) transparent;
+  scrollbar-width: thin;
+}
+.display .result {
+  font-size: 2.5rem;
+  max-width: 95%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 1rem;
+  scrollbar-color: var(--clr-accent) transparent;
+  scrollbar-width: thin;
+}
+
+/*chrome*/
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--clr-accent);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-accent);
+}
+::-webkit-scrollbar-track {
+  background: rgb(22, 22, 22);
+  border-radius: 7px;
+}
+/*chyrome*/
+
+.buttons {
+  height: 65%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-left: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn {
+  background: var(--clr-primary-dark);
+  color: var(--clr-secondary-dark);
+  border: none;
+  width: var(--btn-size);
+  height: var(--btn-size);
+  border-radius: 50%;
+  padding: 1em;
+  font-family: var(--font-family), sans-serif;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.btn:hover::after {
+  transform: scale(1);
+}
+
+.btn:hover {
+  background: rgb(49, 49, 49);
+  cursor: pointer;
+}
+
+#eq,
+#ac {
+  background: var(--clr-accent);
+}
+#eq:hover,
+#ac:hover {
+  background: rgb(252, 94, 94);
+}
