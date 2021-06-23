@@ -123,8 +123,9 @@ body {
   font-weight: 500;
 }
 
-.btn:hover {
-  background: rgb(49, 49, 49);
+.btn:hover,
+btn:focus {
+  /* background: rgb(49, 49, 49); */
   cursor: pointer;
 }
 
