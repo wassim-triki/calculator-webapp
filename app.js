@@ -70,7 +70,7 @@ const evaluate = () => {
       setHistory(newHistory);
     } else {
       if (!endsWithDigit) {
-        setHistory(history.replace(/\s\D$/, ""));
+        setHistory(history.replace(/\D$/, ""));
       }
     }
   } else {
@@ -96,7 +96,7 @@ operators.forEach((op) => {
     let history = getHistory();
     let result = getResult();
     let operator = op.id;
-    const toAdd = " " + operator + " ";
+    const toAdd = operator;
     const endsWithOperator = /\D$/;
     if (!clicked) {
       if (history != "0") {
