@@ -73,6 +73,8 @@ const evaluate = () => {
         setHistory(history.replace(/\s\D$/, ""));
       }
     }
+  } else {
+    result = lastResult;
   }
 
   setResult(result);
